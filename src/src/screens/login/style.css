@@ -1,0 +1,23 @@
+.container{
+    width: 100%;
+}
+.inputContainer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+input{
+    margin: 9px auto;
+    height: 33px;
+    padding-left: 10px;
+    width: 85%;
+}
+.buttonContainer{
+    width: 100%;
+}
+button {
+    margin: 0 auto;
+    width: 55%;
+    height: 35px;
+    display: block;
+}
