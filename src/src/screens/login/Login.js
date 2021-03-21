@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{ Component}  from "react";
 import logo from '../../../logo.svg';
-import {withRouter} from 'react-router-dom';
-class Login extends React.Component {
-    constructor() {
-        super();
+import './style.css'
+class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.onloginButtonClick.bind(this);
     }
     render() {
         return (
@@ -18,7 +19,9 @@ class Login extends React.Component {
                 </div>
                 <div className="buttonContainer">
                     <button
-                    onClick={this.onloginButtonClick}>Login</button>
+                    onClick={()=>{
+                        this.onloginButtonClick()
+                    }}>Login</button>
                 </div>
             </div>
         );
@@ -27,8 +30,8 @@ class Login extends React.Component {
         console.log('props  ',this.props);
     }
     onloginButtonClick(){
-        console.log('dfasdf');
-        this.props.history.push('Home');
+        console.log('dfasdf',this.props.history);
+        this.props.history.push('home');
     }
 }
-export default withRouter(Login);
+export default Login;
